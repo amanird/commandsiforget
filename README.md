@@ -29,7 +29,7 @@ lsblk -f
 
 # Rename removable device
 
-#### If you format something and then the name is defaulted to something you don't like and it doesn't have a lable and the mount point is /run/media/user/[UUID]:
+#### When you format a drive its name (Label) can get defaulted to something you don't like or nothing at all. If it doesn't have a lable the mount point will default to /run/media/user/[UUID]:
 
 Verify the Label:
 ```
