@@ -9,7 +9,7 @@ This README contains a list of commands I forget.
 
 The lsblk command provides information about all available block devices. You can use it with the -f option to display Drives, Filesystem Types, Labels, UUID, Storage Available, Mountpoints:
 ```
- lsblk -f
+lsblk -f
 ```
 
 Unmount the SSD if it is already mounted:
