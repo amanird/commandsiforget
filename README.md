@@ -101,9 +101,12 @@ Directory of [insert path]:
 ls -a /path/to/thing
 ```
 
+## Device drive info
 
-
-
+#### View Drives, Filesystem Types, Labels, UUID, Storage Available, Mountpoints:
+```
+lsblk -f
+```
 
 
 
