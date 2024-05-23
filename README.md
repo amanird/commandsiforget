@@ -10,7 +10,7 @@ A: exFAT
 
 #### You should unmount each partition individually, and then format the drive itself (Partition: sda1, sda2. Drive: sda)
 
-The lsblk command provides information about all available block devices. You can use it with the -f option to display the filesystem type:
+The lsblk command provides information about all available block devices. You can use it with the -f option to display Drives, Filesystem Types, Labels, UUID, Storage Available, Mountpoints:
 ```
  lsblk -f
 ```
@@ -99,13 +99,6 @@ ls -a ~
 Directory of [insert path]:
 ```
 ls -a /path/to/thing
-```
-
-## Device drive info
-
-#### View Drives, Filesystem Types, Labels, UUID, Storage Available, Mountpoints:
-```
-lsblk -f
 ```
 
 
