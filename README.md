@@ -8,7 +8,7 @@ A: exFAT
 
 ## Formatting a drive
 
-#### You should format each partition individually, and then format the drive itself (Partition: sda1, sda2. Drive: sda)
+#### You should unmount each partition individually, and then format the drive itself (Partition: sda1, sda2. Drive: sda)
 
 The lsblk command provides information about all available block devices. You can use it with the -f option to display the filesystem type:
 ```
