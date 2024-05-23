@@ -6,7 +6,7 @@ if i have important school documents, projects, and old movies on my ssd and wan
 
 A: exFAT
 
-### Formatting a drive
+## Formatting a drive
 
 You should format each partition individually, and then format the drive itself (Partition: sda1, sda2. Drive: sda)
 
@@ -22,7 +22,7 @@ Format the SSD as exFAT.
 Verify the new filesystem:
 > lsblk -f
 
-### Rename removable device
+## Rename removable device
 
 if you format something and then the name is defaulted to something you don't like and it doesn't have a lable and the mount point is /run/media/user/[UUID]:
 
@@ -39,7 +39,7 @@ Verify the Label:
 > lsblk -f
 
 
-### Mount with the Label
+## Mount with the Label
 
 To mount the partition with the new label, you can create a directory and manually mount it, or update your /etc/fstab to automate the process.
 
