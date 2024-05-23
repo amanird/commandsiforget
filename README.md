@@ -6,62 +6,61 @@ if i have important school documents, projects, and old movies on my ssd and wan
 
 A: exFAT
 
-//////////////////////////////////
+### Formatting a drive
 
-TO FORMAT THE DRIVE:
+You should format each partition individually, and then format the drive itself (Partition: sda1, sda2. Drive: sda)
 
 The lsblk command provides information about all available block devices. You can use it with the -f option to display the filesystem type.
-  lsblk -f
+> lsblk -f
 
 Unmount the SSD if it is already mounted.
-  sudo umount /dev/sdX1
+> sudo umount /dev/sdX1
 
 Format the SSD as exFAT.
-  sudo mkfs.exfat /dev/sdX
+> sudo mkfs.exfat /dev/sdX
 
 Verify the new filesystem:
-  lsblk -f
+> lsblk -f
 
-//////////////////////////////////
+### Rename removable device
 
 if you format something and then the name is defaulted to something you don't like and it doesn't have a lable and the mount point is /run/media/user/[UUID]:
 
 Verify the Label:
-  lsblk -f
+> lsblk -f
 
 Make sure  what you want to change is unmounted:
-  sudo umount /dev/sda1
+> sudo umount /dev/sda1
 
 Set the label for exFAT:
-  sudo exfatlabel /dev/sda1 YourLabel
+> sudo exfatlabel /dev/sda1 YourLabel
 
 Verify the Label:
-  lsblk -f
+> lsblk -f
 
-//////////////////////////////////
 
-Mount with the Label:
+### Mount with the Label
+
 To mount the partition with the new label, you can create a directory and manually mount it, or update your /etc/fstab to automate the process.
 
 Manual Mount.
-  sudo mkdir /mnt/YourLabel
+> sudo mkdir /mnt/YourLabel
 
 Mount the partition.
-  sudo mount /dev/sda1 /mnt/YourLabel
+> sudo mount /dev/sda1 /mnt/YourLabel
 
 Automate Mounting with /etc/fstab.
-  sudo nano /etc/fstab
+> sudo nano /etc/fstab
 
 Add an entry for your partition.
-  LABEL=YourLabel /mnt/YourLabel exfat defaults 0 2
+> LABEL=YourLabel /mnt/YourLabel exfat defaults 0 2
 
 Test the new fstab entry.
-  sudo mount -a
+> sudo mount -a
 
 Verify the mounting:
-  lsblk -f
+> lsblk -f
 
-//////////////////////////////////
 
 
 
