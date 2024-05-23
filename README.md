@@ -1,14 +1,11 @@
 # commandsiforget
 
-if i wanted to make sure that the filesystem supports the whole amount of storage (2tb in this instance) which filesystem should i use  if i want the ssd to be used or be able to be used across different os (linux, windows, mac)
+This README contains a list of commands I forget.
 
-if i have important school documents, projects, and old movies on my ssd and wanted this drive to be able to be plugged into any computer and have the content and data be easily accessable would you still recommend exfat or another filesystem
+# Formatting a drive
 
-A: exFAT
-
-## Formatting a drive
-
-#### You should unmount each partition individually, and then format the drive itself (Partition: sda1, sda2. Drive: sda)
+#### You should unmount each partition individually, and then format the drive itself 
+(Partition: sda1, sda2. Drive: sda)
 
 The lsblk command provides information about all available block devices. You can use it with the -f option to display Drives, Filesystem Types, Labels, UUID, Storage Available, Mountpoints:
 ```
@@ -30,7 +27,7 @@ Verify the new filesystem:
 lsblk -f
 ```
 
-## Rename removable device
+# Rename removable device
 
 #### If you format something and then the name is defaulted to something you don't like and it doesn't have a lable and the mount point is /run/media/user/[UUID]:
 
@@ -54,7 +51,7 @@ Verify the Label:
 lsblk -f
 ```
 
-## Mount with the Label
+# Mount with the Label
 
 #### To mount the partition with the new label, you can create a directory and manually mount it, or update your /etc/fstab to automate the process.
 
@@ -88,7 +85,7 @@ Verify the mounting:
 lsblk -f
 ```
 
-## View hidden files within a directory
+# View hidden files within a directory
 
 Home directory:
 
