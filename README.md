@@ -12,12 +12,12 @@ The lsblk command provides information about all available block devices. You ca
 lsblk -f
 ```
 
-Unmount the SSD if it is already mounted:
+Unmount the drive if it is already mounted:
 ```
 sudo umount /dev/sdX1
 ```
 
-Format the SSD as exFAT:
+Format the drive to preferred filesystem:
 ```
 sudo mkfs.exfat /dev/sdX
 ```
